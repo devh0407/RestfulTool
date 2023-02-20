@@ -60,6 +60,9 @@
         <projectService
                 serviceImplementation="com.github.restful.tool.view.search.GotoRequestConfiguration"/>
 
+        
+        
+        
         <toolWindow id="RestfulTool" anchor="right"
                     factoryClass="com.github.restful.tool.view.window.RestfulToolWindowFactory"
                     order="last"
