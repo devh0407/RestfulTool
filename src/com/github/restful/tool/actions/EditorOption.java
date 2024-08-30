@@ -13,6 +13,7 @@ package com.github.restful.tool.actions;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.openapi.editor.Editor;
+import java.lang.String;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import org.jetbrains.annotations.NotNull;
@@ -29,9 +30,11 @@ public interface EditorOption {
      *
      * @param e AnActionEvent
      * @return PsiElement
+     * @since 2.0.0
      */
     @Nullable
     static PsiElement getCurrentEditorElement(@NotNull AnActionEvent e) {
+        System.out.println("e" + e.toString);
         Editor editor = e.getData(LangDataKeys.EDITOR);
         if (editor == null) {
             return null;
